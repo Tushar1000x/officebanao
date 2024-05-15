@@ -1,0 +1,139 @@
+/* DashBoard.module.css */
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .top input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    flex-grow: 1;
+    margin-right: 10px;
+   
+  }
+  
+  .top select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right:40% ;
+  }
+  
+  .top button {
+    padding: 10px 20px;
+    background-color:#334D6E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .top button:hover {
+    background-color: #0056b3;
+  }
+  .top button span{
+    font-size: 20px;
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .masonryGrid {
+    display: flex;
+    margin-left: -20px; /* Adjust for margin */
+    width: auto;
+  }
+  
+  .masonryGridColumn {
+    padding-left: 0px; /* Adjust for margin */
+  }
+/*   
+  .imageContainer {
+    margin-bottom: 20px;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    border-radius: 4px;
+  } */
+
+  /* Add this CSS to your DashBoard.module.css file */
+.imageContainer {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    overflow: none;
+  }
+  
+  .imageContainer:hover img {
+    transform: scale(1.1);
+  }
+  .imageOptions {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    display: none;
+   
+  }
+  .imageContainer:hover .imageOptions {
+    display: block;
+  }
+  .imageOptions button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 5px 5px;
+    margin-right: 3px;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: background 0.3s ease;
+    font-size: 15px;
+  }
+  .optionButton{
+position: relative;
+top: 2.5px;
+  }
+  .imageOptions button img{
+    height: 18px;
+ }
+  .name{
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    top: 10px;
+    left: 10px;
+
+}
+.imageContainer:hover .name {
+    display: block;
+  }
+  .imgOptions{
+    position: absolute;
+    
+  }

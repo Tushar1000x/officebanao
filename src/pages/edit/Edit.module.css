@@ -1,0 +1,150 @@
+/* Edit.module.css */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+    max-width: 98vw;
+    height: 90vh;
+    max-height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000; 
+    overflow: hidden;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .top h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .top button {
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bottom {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .left {
+   
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .right {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }
+  
+  .imgcover {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .uploadimg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filters input {
+    height: 25px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 99%;
+  }
+  
+  .filters textarea {
+    height: 100px;
+    width:100%;
+    resize: none;
+    
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    top: -40%;
+    right: 2%;
+    border-radius:20px ;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: green;   */
+}
+  
+  .dropdowntoggle {
+  padding: 6px;
+  width: 28px;
+  cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: calc(100% - 22px); /* Adjust the space between the toggle and menu */
+    transform: translateX(-40%);
+    width: 80px; /* Adjust the width as needed */
+    padding: 10px;
+    margin: 0;
+    right: -50px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .dropdownMenu ul {
+    /* background-color: green; */
+  }
+
+  
+  .dropdownMenu li {
+    margin-top: 0.5rem;
+    border-radius:20px ;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    list-style: none;
+    
+  }
+  
+  .dropdownMenu li:hover {
+    background-color: #f0f0f0;
+  }
+  .dropdown:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown img {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+  }
+  
