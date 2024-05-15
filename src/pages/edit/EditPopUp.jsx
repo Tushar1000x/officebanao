@@ -14,6 +14,8 @@ function EditPopUp({ open, setOpen, img ,setimgCount}) {
     const [transformations, setTransformations] = useState([]);
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+      
     const [imgInfo, setImgInfo] = useState(JSON.parse(localStorage.getItem('uploadedImg')) || []);
 
     const handleTransform = (type) => {
@@ -39,10 +41,8 @@ function EditPopUp({ open, setOpen, img ,setimgCount}) {
     const getTransformStyle = () => {
         return transformations.join(' ');
     };
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
+    
+   
     const handleSubmit = () => {
         const nameExists = imgInfo.some(asset => asset.name === name);
         if (nameExists) {
@@ -75,6 +75,13 @@ function EditPopUp({ open, setOpen, img ,setimgCount}) {
             localStorage.setItem('uploadedImg', JSON.stringify(updatedImgInfo));
             setimgCount(1);
             console.log(JSON.parse(localStorage.getItem('uploadedImg')));
+
+            const downloadLink = document.createElement('a');
+            downloadLink.href = transformedImg;
+            downloadLink.download = `${name}_edited.png`; // Set desired file name
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
         }
     };
     const applyHorizontalFlip = (image) => {
@@ -161,6 +168,7 @@ function EditPopUp({ open, setOpen, img ,setimgCount}) {
                                     <li onClick={() => handleTransform("rotate")}><img src={rotate} alt="rotate" /></li>
                                     <li onClick={() => handleTransform("horizontalflip")}><img src={flipV} alt="horizontal flip" /></li>
                                     <li onClick={() => handleTransform("verticalflip")}><img src={flipH} alt="vertical flip" /></li>
+                                    <li onClick={() => handleTransform("exchange")}><img src={exchange} alt="vertical flip" /></li>
                                 </ul>
                             </div>
                         )}
